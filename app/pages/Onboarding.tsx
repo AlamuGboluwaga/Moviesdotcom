@@ -24,14 +24,14 @@ const Onboarding = () => {
           <Text className="text-secondary">Aora</Text>
         </Text>
       </View>
-      <View className="border w-full h-10 ">
+      <View className="w-full h-10 ">
         <Text className=" font-poppins  text-words text- text-center px-4">
           Where Creativity Meets Innovation: Embark on a Journey of Limitless
           Exploration with Aora
         </Text>
       </View>
-      <Link href='/pages/SignUp' className="h-14 w-full flex  justify-center items-center">
-        <Button colors={["#FF8C00", "#FFA300"]} start={[0,0]} end={[1,0]} title={'Continue with Email'} h={12} w={80} />
+      <Link href='/pages/SignUp' className="h-14  w-full flex  justify-center items-center">
+        <Button colors={["#FF8C00", "#FFA300"]} start={[0,0]} end={[1,0]} title={'Continue with Email'} h={14} w={80} />
         </Link>
     </View>
   );

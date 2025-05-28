@@ -8,7 +8,12 @@ module.exports = {
         primary: "#161622",
         secondary: "#FF8C00",
         tertiary: "#FFFFFF",
-        words:'#CDCDE0'
+        grad1:"#FF8C00",
+        grad2:'FFA300',
+        label:'#CDCDE0',
+        placeholder:'#7B7B8B',
+        bgInput:'#1E1E2D'
+
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

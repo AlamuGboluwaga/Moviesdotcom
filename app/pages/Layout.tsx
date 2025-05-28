@@ -6,7 +6,7 @@ interface LayoutProps {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  return <View className="h-screen w-screen  bg-primary">{children}</View>;
+  return <View className="flex justify-center items-center h-screen w-screen  bg-primary">{children}</View>;
 };
 
 export default Layout;
