@@ -12,7 +12,11 @@ module.exports = {
         grad2:'FFA300',
         label:'#CDCDE0',
         placeholder:'#7B7B8B',
-        bgInput:'#1E1E2D'
+        bgInput:'#1E1E2D',
+        accountState: '#CDCDE0',
+        accountStatus: '#FF9001'
+
+
 
       },
       fontFamily: {

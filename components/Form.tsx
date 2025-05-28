@@ -11,8 +11,8 @@ interface FormProps{
 
 const Form = ({children,title,h,w,textColor}:FormProps) => {
   return (
-  <View className={`h-[${h}] w-${w} flex justify-center items-cente border border-white space-y-8`}>
-    <Text className={`text-left text-${textColor}`}>{title}</Text>
+  <View className={`h-[27rem] w-${w} flex space-y-8`}>
+    <Text className={`mb-8 text-left font-bold text-xl text-${textColor}`}>{title}</Text>
     {children}
     </View>
   )
