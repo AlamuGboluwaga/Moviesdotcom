@@ -2,8 +2,8 @@ import React from "react";
 import { View, Text, Image } from "react-native";
 import Logo from "../../assets/images/logo.png";
 import Onboard from "../../assets/images/onboard.png";
-import Button from "@/components/Button";
 import { Link } from "expo-router";
+import Button from "@/components/Button";
 
 const Onboarding = () => {
   return (
@@ -25,13 +25,15 @@ const Onboarding = () => {
         </Text>
       </View>
       <View className="w-full h-10 ">
-        <Text className=" font-poppins  text-words text- text-center px-4">
+        <Text className=" font-poppins  text-words text-message text-center px-4">
           Where Creativity Meets Innovation: Embark on a Journey of Limitless
           Exploration with Aora
         </Text>
       </View>
-      <Link href='/pages/SignUp' className="h-14  w-full flex  justify-center items-center">
-        <Button colors={["#FF8C00", "#FFA300"]} start={[0,0]} end={[1,0]} title={'Continue with Email'} h={14} w={80} />
+      <Link href='/home' className="h-14  w-full flex  justify-center items-center">
+        <Button colors={["#FF8C00", "#FFA300"]} start={[0, 0]} end={[1, 0]} title={'Continue with Email'} h={14} w={80} onPress={function (): (void) {
+          throw new Error("Function not implemented.");
+        } } mt={0} />
         </Link>
     </View>
   );

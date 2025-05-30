@@ -1,15 +1,16 @@
 import React from "react";
 import { Text, View, Image } from "react-native";
-import Layout from "./Layout";
 import Logo from "../../assets/images/logo.png";
 import Form from "@/components/Form";
 import InputFiled from "@/components/InputFiled";
 import Button from "@/components/Button";
 import AccountState from "@/components/AccountState";
+import Layout from "../(tabs)/_layout";
 
-const SignUp = () => {
+const SignIn = () => {
+  const handlePress = () => {};
   return (
-    <Layout>
+    // <Layout>
       <View className="h-[90%] w-full  p-4 space-y-6">
         <View className="h-20 w-60 flex justify-center ">
           <Image
@@ -20,41 +21,47 @@ const SignUp = () => {
         </View>
         {/* <View className="text-white">Sign up</View> */}
         <View>
-          <Form title={"SignUp"} h={"20rem"} w={120} textColor="white">
-            <View className="w-full mb-10 space-y-10 ">
+          <Form title={"Sign In"} h={"20rem"} w={120} textColor="white">
+            <View className="w-full  space-y-4  ">
               <InputFiled
-                label="Username"
-                placeholder="Your Unique username"
-                h={20}
+                label="Email"
+                placeholder="Enter Your Email"
+                h={10}
                 w={40}
               />
               <InputFiled
-                label="Email"
+                label="Password"
                 placeholder="Your email address"
-                h={20}
+                h={10}
                 w={40}
               />
             </View>
-            <View className="h-20">
+            <View className="w-full flex items-end ">
+              <Text className="text-message">Forgot Password</Text>
+            </View>
+
+            <View className=" bg-green-700">
               <Button
                 colors={["#FF8C00", "#FFA300"]}
                 start={[0, 0]}
                 end={[1, 0]}
-                title="SignUp"
+                title="Sign In"
                 h={14}
                 w={40}
+                mt={3}
+                onPress={handlePress}
               />
             </View>
           </Form>
-          
           <AccountState
-          textMessage="Already have an account ?"
-          textStatus="Login"
-        />
+            textMessage="Already have an account ?"
+            textStatus="Signup"
+            href="/(auth)/signup"
+          />
         </View>
       </View>
-    </Layout>
+    // </Layout>
   );
 };
 
-export default SignUp;
+export default SignIn;

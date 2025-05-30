@@ -13,7 +13,7 @@ module.exports = {
         label:'#CDCDE0',
         placeholder:'#7B7B8B',
         bgInput:'#1E1E2D',
-        accountState: '#CDCDE0',
+        message: '#CDCDE0',
         accountStatus: '#FF9001'
 
 

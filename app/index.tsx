@@ -1,16 +1,12 @@
-import { View } from "react-native";
+import { View,Text } from "react-native";
 import "../global.css";
-import Onboarding from "./pages/Onboarding";
-import Layout from "./pages/Layout";
-
+import Layout from "./(auth)/_layout";
+import Onboarding from "./(auth)/onboarding";
 const App = () => {
   return (
-    <Layout>
-      <Onboarding/>
-    </Layout>
-
-    
-  
+<Layout>
+  <Onboarding/>
+</Layout>
   );
 };
 
