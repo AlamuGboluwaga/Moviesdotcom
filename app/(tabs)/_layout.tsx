@@ -1,37 +1,33 @@
-import { View, Text, Image } from "react-native";
-import React from "react";
 import { Tabs } from "expo-router";
+import React from "react";
+import { Image, View } from "react-native";
 import homeicon from "../../assets/images/home.png";
 
+const TabIcon = ({}) => {
+  return (
+    <View className="h-6 w-6 ">
+      <Image source={homeicon} style={{width:24, height:24}}
+      tintColor={'gray'}
+      />
+    </View>
+  );
+};
 
-  
-   
-   const TabIcon = () => {
-     return (
-      <View>
-      <Image source={homeicon}/>
-      </View>
-     )
-   }
-   
-
-   
-  
 
 const TabLayout = () => {
   return (
     <Tabs>
       <Tabs.Screen
-        name="hom"
+        name="home"
         options={{
           headerShown: false,
           title: "Home",
-          tabBarIcon: ({ focused, color, size }) =>(
-            <TabIcon/>
-          )
-
-           
-        }}
+        tabBarIcon: ({ focused, color }) => (
+        <TabIcon  /> ),
+          // tabBarInactiveTintColor:""  
+          }}
+        
+         
       />
     </Tabs>
   );
