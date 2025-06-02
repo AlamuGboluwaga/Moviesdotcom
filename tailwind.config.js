@@ -14,7 +14,8 @@ module.exports = {
         placeholder:'#7B7B8B',
         bgInput:'#1E1E2D',
         message: '#CDCDE0',
-        accountStatus: '#FF9001'
+        accountStatus: '#FF9001',
+        text:'#D6D9DF'
 
 
 

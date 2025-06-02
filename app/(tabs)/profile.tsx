@@ -1,11 +1,12 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import Layout from '../(auth)/_layout'
 
 const Profile = () => {
   return (
-    <View>
-      <Text>Profile</Text>
-    </View>
+      <Layout>
+      <View><Text className='text-white'>Profile</Text></View>
+    </Layout>
   )
 }
 
