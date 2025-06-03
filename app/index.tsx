@@ -1,13 +1,17 @@
-import { View,Text } from "react-native";
-import "../global.css";
-import Layout from "./(auth)/_layout";
+import { View, Text, ScrollView } from "react-native";
+import React from "react";
+import { SafeAreaView } from "react-native-safe-area-context";
 import Onboarding from "./(auth)/onboarding";
-const App = () => {
+import "../global.css";
+
+const index = () => {
   return (
-<Layout>
-  <Onboarding/>
-</Layout>
+    <SafeAreaView className="h-screen w-screen  bg-primary">
+      <ScrollView>
+        <Onboarding />
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 
-export default App;
+export default index;

@@ -9,7 +9,7 @@ import Savedicon from "../../assets/images/saved.png";
 interface TabIconProps {
   focus: boolean;
   icon: any;
-  name:string
+  name: string;
 }
 const tabArray: { name: string; tabTitle: string; icon: any }[] = [
   { name: "home", tabTitle: "Home", icon: homeicon },
@@ -18,7 +18,7 @@ const tabArray: { name: string; tabTitle: string; icon: any }[] = [
   { name: "saved", tabTitle: "Saved", icon: Savedicon },
 ];
 
-const TabIcon = ({ focus, icon,name }: TabIconProps) => {
+const TabIcon = ({ focus, icon, name }: TabIconProps) => {
   return (
     <View className="h-6 w-6 flex   items-center ">
       <Image
@@ -26,30 +26,32 @@ const TabIcon = ({ focus, icon,name }: TabIconProps) => {
         style={{ width: 24, height: 24 }}
         tintColor={focus ? "orange" : ""}
       />
-      <Text className={`${focus?"text-orange-400 font-bold ":'text-text font-thin'}`}>{name}</Text>
+      <Text
+        className={`${
+          focus ? "text-orange-400 font-bold " : "text-text font-thin"
+        }`}
+      >
+        {name}
+      </Text>
     </View>
   );
 };
 
 const TabLayout = () => {
   return (
-    <Tabs 
-    screenOptions={{
-      tabBarShowLabel:false,
-    tabBarStyle:{
-      backgroundColor:'#161622',
-      borderTopColor:'#232533'
-    
-      
-      
-    }
-    }}
+    <Tabs
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarStyle: {
+          backgroundColor: "#161622",
+          borderTopColor: "#232533",
+        },
+      }}
     >
       {tabArray.map((item, index) => (
         <Tabs.Screen
           key={index}
           name={item.name}
-          
           options={{
             headerShown: false,
             title: item.tabTitle,
@@ -57,7 +59,6 @@ const TabLayout = () => {
               <TabIcon focus={focused} icon={item.icon} name={item.tabTitle} />
             ),
           }}
-          
         />
       ))}
     </Tabs>
