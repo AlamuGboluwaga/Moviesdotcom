@@ -16,9 +16,6 @@ module.exports = {
         message: '#CDCDE0',
         accountStatus: '#FF9001',
         text:'#D6D9DF'
-
-
-
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

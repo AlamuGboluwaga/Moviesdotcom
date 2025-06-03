@@ -1,36 +1,19 @@
-import { Tabs } from "expo-router";
+import { View, Text, Image } from "react-native";
 import React from "react";
-import { Image, Text, View } from "react-native";
-import homeicon from "../../assets/images/home.png";
-import Createicon from "../../assets/images/create.png";
-import profileicon from "../../assets/images/profile.png";
-import Savedicon from "../../assets/images/saved.png";
+import { Tabs } from "expo-router";
+import { tabArray } from "./arrays";
+import { TabIconProp } from "../constants";
 
-interface TabIconProps {
-  focus: boolean;
-  icon: any;
-  name: string;
-}
-const tabArray: { name: string; tabTitle: string; icon: any }[] = [
-  { name: "home", tabTitle: "Home", icon: homeicon },
-  { name: "create", tabTitle: "Create", icon: Createicon },
-  { name: "profile", tabTitle: "Profile", icon: profileicon },
-  { name: "saved", tabTitle: "Saved", icon: Savedicon },
-];
-
-const TabIcon = ({ focus, icon, name }: TabIconProps) => {
+const TabIcon = ({ focus, icon, name }: TabIconProp) => {
   return (
-    <View className="h-6 w-6 flex   items-center ">
+    <View className=" flex items-center justify-center">
       <Image
         source={icon}
-        style={{ width: 24, height: 24 }}
-        tintColor={focus ? "orange" : ""}
+        resizeMode="contain"
+        style={{ height: 20 }}
+        tintColor={focus ? "#FF8C00" : ""}
       />
-      <Text
-        className={`${
-          focus ? "text-orange-400 font-bold " : "text-text font-thin"
-        }`}
-      >
+      <Text className={`${focus ? "text-grad1" : "text-message"}`}>
         {name}
       </Text>
     </View>
@@ -41,22 +24,23 @@ const TabLayout = () => {
   return (
     <Tabs
       screenOptions={{
-        tabBarShowLabel: false,
+        tabBarLabel: "",
         tabBarStyle: {
           backgroundColor: "#161622",
-          borderTopColor: "#232533",
+          paddingTop: 6,
+          borderTopColor:'#CDCDE0',
+          borderTopWidth:1
         },
       }}
     >
-      {tabArray.map((item, index) => (
+      {tabArray.map((tabs, index) => (
         <Tabs.Screen
-          key={index}
-          name={item.name}
+          name={tabs.name}
           options={{
             headerShown: false,
-            title: item.tabTitle,
-            tabBarIcon: ({ focused, color }) => (
-              <TabIcon focus={focused} icon={item.icon} name={item.tabTitle} />
+            tabBarInactiveTintColor: "orange",
+            tabBarIcon: ({ focused, color, size }) => (
+              <TabIcon focus={focused}  icon={tabs.icon} name={tabs.iconName} />
             ),
           }}
         />

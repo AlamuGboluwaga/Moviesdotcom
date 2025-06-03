@@ -6,8 +6,8 @@ import "../global.css";
 
 const index = () => {
   return (
-    <SafeAreaView className="h-screen w-screen  bg-primary">
-      <ScrollView>
+    <SafeAreaView className="h-full w-full  bg-primary">
+      <ScrollView style={{height:'100%'}}>
         <Onboarding />
       </ScrollView>
     </SafeAreaView>
