@@ -1,16 +1,15 @@
 import React from "react";
 import { Text, View, Image } from "react-native";
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/images/aora.png";
 import Form from "@/components/Form";
 import InputFiled from "@/components/InputFiled";
 import Button from "@/components/Button";
-import AccountState from "@/components/AccountState";
-import Layout from "../(tabs)/_layout";
+import AccountState from "@/components/AccountState"
 
 const SignIn = () => {
   const handlePress = () => {};
   return (
-    // <Layout>
+    
       <View className="h-[90%] w-full  p-4 space-y-6">
         <View className="h-20 w-60 flex justify-center ">
           <Image
@@ -60,7 +59,7 @@ const SignIn = () => {
           />
         </View>
       </View>
-    // </Layout>
+    
   );
 };
 

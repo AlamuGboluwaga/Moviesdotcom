@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, View, Image, Alert } from "react-native";
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/images/aora.png";
 import Form from "@/components/Form";
 import InputFiled from "@/components/InputFiled";
 import Button from "@/components/Button";

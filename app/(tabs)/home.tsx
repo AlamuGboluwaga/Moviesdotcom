@@ -15,7 +15,7 @@ const Home = () => {
         <View className="h-20 w-full p-6 flex flex-row justify-between">
           <View className="space-y-1">
             <Text className="text-message ">Welcome Back</Text>
-            <Text className="text-message text-2xl font-extrabold ">
+            <Text className="text-message text-2xl font-extrabold   ">
               jsmastery
             </Text>
           </View>
@@ -36,7 +36,7 @@ const Home = () => {
             name="search"
             size={24}
             color="#7B7B8B"
-            className="absolute top-5 right-12"
+            className="absolute top-5 right-12 bg "
           />
         </View>
         <View className="px-4">
