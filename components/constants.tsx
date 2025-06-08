@@ -1,22 +1,20 @@
-import { ImageResizeMode, ImageSourcePropType } from "react-native";
+import { ImageProps } from "react-native";
 
-export interface HeaderImageProps {
-   title ?:  string
-  h?: string | number;
-  w?: string | number;
-  source: ImageSourcePropType;
-  style?: any;
-  vh?:string|number
-  vw?:string|number|[string]
-  others: string
-  
-
-  resizeMode: ImageResizeMode;
+export interface ImagesProps extends ImageProps {
+  h: string | number;
+  w: string | number;
+  otherClasses?: string;
 }
 
 export interface HeaderProps {
   h: string | number;
   w: string | number;
   title: string;
-  children: any;
+  children: React.ReactNode;
+}
+export interface MessageProps {
+  h: string;
+  w: string;
+  otherClasses: string;
+  children: React.ReactNode;
 }
