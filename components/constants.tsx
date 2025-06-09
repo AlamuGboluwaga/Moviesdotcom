@@ -1,4 +1,13 @@
-import { ImageProps } from "react-native";
+import { ImageProps, TouchableOpacityProps } from "react-native";
+import { LinearGradientProps } from 'expo-linear-gradient';
+
+export interface ButtonProps extends TouchableOpacityProps {
+  children: React.ReactNode;
+  h: string | number;
+  w: string | number;
+  otherClasses:string
+  linearGradientProps?: Partial<LinearGradientProps>;
+}
 
 export interface ImagesProps extends ImageProps {
   h: string | number;

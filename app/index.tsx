@@ -7,10 +7,13 @@ import aroa from "../assets/images/aora.png";
 import curf from "../assets/images/curf.png";
 import onboardimage from "../assets/images/onboard.png";
 import "../global.css";
+import Button from "@/components/Button";
 
-const index = ({}) => {
+
+
+const index = () => {
   return (
-    <Layout>
+    <Layout gap="gap-2">
       <Images
         source={aroa}
         resizeMode="contain"
@@ -23,25 +26,36 @@ const index = ({}) => {
         resizeMode="contain"
         h="h-120"
         w="w-full"
-        otherClasses="bg-green-700"
+        otherClasses=""
       />
       <Message
         h="h-20"
         w="w-120"
-        otherClasses="flex items-center justify-center"
+        otherClasses=" relative flex items-center justify-center"
       >
         <Text className="text-message font-extrabold  text-4xl ">
           Discover Endless
         </Text>
         <Text className="text-message font-extrabold  text-4xl ">
-          Possibilities with <Text className="text-grad1">Aora</Text>
+          Possibilities with <Text className="text-grad1  ">Aora</Text>
         </Text>
         <Images source={curf}
         resizeMode="contain"
-        h="h-12"
+        h="h-30"
         w="w-20"
-        otherClasses="absolue bg-green-700" />
+        otherClasses="absolute  top-14 right-14 "></Images>
       </Message>
+      <Message  h="h-24"
+        w="w-full"
+        otherClasses="flex items-center justify-center ">
+        <Text className="text-message ">Where Creativity Meets Innovation: Embark on</Text>
+         <Text className="text-message "> a Journey of Limitless Exploration with Aora</Text>
+      </Message>
+      <Button h='h-16' w='w-100' otherClasses="flex justify-center items-center bg-orange-400 rounded-lg " >
+        
+    <Text className="text-primary font-semibold text-xl">Continue with Email</Text>
+        
+      </Button>
     </Layout>
   );
 };

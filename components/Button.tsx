@@ -1,33 +1,28 @@
-import React from "react";
-import { Pressable, Text,TouchableOpacity } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
+import { View, Text, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { ButtonProps } from './constants';
+import { LinearGradient } from 'expo-linear-gradient';
 
-interface ButtonProps {
-  colors: [string, string];
-  start: [number, number];
-  end: [number, number];
-  title:string
-  h:number
-  w:number
-  onPress:()=>(void)
-  mt:number
-}
-
-const Button = ({ colors, start, end,title,h,w,mt,onPress }: ButtonProps) => {
+const Button = ({
+  h,
+  w,
+  children,
+  
+  otherClasses,
+  linearGradientProps,
+  ...props
+}: ButtonProps) => {
   return (
-    <TouchableOpacity className=" " onPress={onPress}>
-    <LinearGradient
-      colors={colors}
-      start={start}
-      end={end}
-      
-      className={ `mt-${mt}  rounded-xl px-4 py-2 h-${h} w-${w} p-4 flex justify-center items-center`}
-    >
-      
-        <Text className="text-primary font-bold">{title}</Text>
-     
-    </LinearGradient>
-     </TouchableOpacity>
+    <TouchableOpacity className={`${h} ${w} ${otherClasses}`} {...props}>
+      <LinearGradient
+        start={[1,0]}
+        end={[1, 1]}
+        colors={['#FF8C00', '#FFA300']}
+        {...linearGradientProps}
+      >
+       {children}
+      </LinearGradient>
+    </TouchableOpacity>
   );
 };
 
