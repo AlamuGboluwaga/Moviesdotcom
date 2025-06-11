@@ -1,6 +1,12 @@
 import { ImageProps, TouchableOpacityProps } from "react-native";
 import { LinearGradientProps } from 'expo-linear-gradient';
 
+export interface  TabIconProp {
+  focus:any
+   icon:any
+    name: string
+}
+
 export interface ButtonProps extends TouchableOpacityProps {
   children: React.ReactNode;
   h: string | number;

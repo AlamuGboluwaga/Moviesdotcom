@@ -14,7 +14,7 @@ const Button = ({
 }: ButtonProps) => {
   return (
     <TouchableOpacity
-    className={`h-20  bg-[#FFA300] rounded-lg  ${h} ${w} ${otherClasses}`}
+    className={`h-20  bg-[#FF8C00] rounded-lg  ${h} ${w} ${otherClasses}`}
       {...props}
     >
       <LinearGradient

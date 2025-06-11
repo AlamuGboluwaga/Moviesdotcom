@@ -2,7 +2,7 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import { Tabs } from "expo-router";
 import { tabArray } from "./arrays";
-import { TabIconProp } from "../constants";
+import { TabIconProp } from "@/components/constants";
 
 const TabIcon = ({ focus, icon, name }: TabIconProp) => {
   return (

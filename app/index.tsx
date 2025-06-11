@@ -2,16 +2,22 @@ import Images from "@/components/Images";
 import Layout from "@/components/Layout";
 import Message from "@/components/Message";
 import React from "react";
-import { Text } from "react-native";
+import { Text} from "react-native";
 import aroa from "../assets/images/aora.png";
 import curf from "../assets/images/curf.png";
 import onboardimage from "../assets/images/onboard.png";
 import "../global.css";
 import Button from "@/components/Button";
+import { router } from "expo-router";
+import Statusbar from "@/components/statusbar";
+
 
 const index = () => {
+  const handleSignUP=()=>{
+    router.push('/(auth)/signup')
+  }
   return (
-    <Layout gap="gap-2">
+     <Layout gap="gap-2">
       <Images
         source={aroa}
         resizeMode="contain"
@@ -62,12 +68,16 @@ const index = () => {
         h="h-20"
         w="w-[28rem]"
         otherClasses="flex justify-center items-center bg-orange-40  "
+        onPress={handleSignUP}
       >
         <Text className="text-primary font-semibold text-xl rounded-lg">
           Continue with Email
         </Text>
       </Button>
-    </Layout>
+     <Statusbar/>
+   </Layout> 
+  
+
   );
 };
 
